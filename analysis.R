@@ -1,6 +1,6 @@
 ################################
-# Global inventory incompletness
-# for butterflies 
+# Inventory completness
+# analysis for butterflies
 ################################
 
 # load required libraries
