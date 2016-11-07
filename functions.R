@@ -40,7 +40,6 @@ dfcreatemg <- function(inputdf = NULL, inputmap) {
     return(tmpmap.df)
 }
 
-
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 #@@ Create discrete legend for plotting 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -79,8 +78,8 @@ legrank <- function(inputdf, ntiles, colname, inraster = NULL) {
     return(results1)
 }
 
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
-#@@ Calculate trends in the form of percentages @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+#@@  Calculate trends in the form of percentages #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 trendsmg1 <- function(inputdf, start1, end1, start2, end2) {
     results <- NULL
@@ -109,7 +108,6 @@ trendsmg1 <- function(inputdf, start1, end1, start2, end2) {
     }
     return(results)
 }
-
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 #@@ Calculate inventory incompletness  
