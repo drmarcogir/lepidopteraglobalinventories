@@ -78,8 +78,9 @@ legrank <- function(inputdf, ntiles, colname, inraster = NULL) {
     return(results1)
 }
 
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
-#@@  Calculate trends in the form of percentages #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#@@@@@@@@@@@@@@@@@@@@@@@@@ 
+#@@  Calculate trends (%)
+#@@@@@@@@@@@@@@@@@@@@@@@@@
 
 trendsmg1 <- function(inputdf, start1, end1, start2, end2) {
     results <- NULL
