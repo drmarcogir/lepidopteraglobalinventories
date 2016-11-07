@@ -95,15 +95,12 @@ combined1<-legrank(inputdf=combined,ntiles=5,colname=c("trend"))
 combined1$rankd<-factor(combined1$rankd,rev(levels(combined1$rankd)[c(5,2,1,3,4)]))
 combined1$period<-factor(combined1$period,levels(as.factor(combined1$period))[c(2,4,1,3,5,6)])
 
-
-# create plot and save
+# create maps and save
 mypal<-brewer.pal(5,"Spectral")
 
 p1<-ggplot(combined1)+aes(long,lat,group=group,fill=rankd) +geom_polygon() +geom_path(color="black",size=0.1) +coord_equal()+theme(legend.title=element_blank())+theme(panel.background = element_rect(fill =NA , colour = NA))+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+theme(axis.text.x = element_blank(),axis.text.y=element_blank(),axis.ticks = element_blank())+labs(x ="",y="")+facet_wrap(~period,scales="free",ncol=2)+theme(plot.margin=unit(c(0,0,0,0),"mm"))+scale_fill_manual(values=mypal)
 
-
 ggsave(filename="/mnt/data1tb/Dropbox/Lepidopteraglobal/figures/trends.JPG",plot =p1,width=9,height=7)
-
  
 ###########################
 # Inventory incompleteness
@@ -128,11 +125,8 @@ combined<-rbind(results500km,results100km)
 
 # create discrete legend
 combined1<-legrank(inputdf=combined,ntiles=6,colname=c("slope"))
-#combined1$rankd<-factor(combined1$rankd,rev(levels(combined1$rankd)))
 
-
-
-
+# create maps and save
 mypal<-(brewer.pal(6,"Spectral"))
 
 p2<-ggplot(data = combined1, aes(x = x, y = y, fill = rankd)) +geom_raster()+coord_fixed(1.1)+labs(x ="",y="")+theme(axis.text.x = element_blank(),axis.text.y=element_blank(),axis.ticks = element_blank())+theme(plot.margin=unit(c(0,0,0,0),"mm"))+theme(legend.title=element_blank())+scale_fill_manual(values=mypal)+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+theme(strip.text.x = element_text(size=12, face="bold"),strip.background = element_rect())+theme(panel.background = element_rect(fill =NA , colour = NA))+theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())+geom_polygon(data=world1,aes(long,lat,group=group), colour="black", fill="white",alpha=0,size=0.2)+facet_wrap(~resolution,ncol=1)+theme(plot.margin=grid::unit(c(0,0,0,0), "mm"))
