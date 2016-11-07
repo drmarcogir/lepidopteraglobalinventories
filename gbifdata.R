@@ -13,6 +13,14 @@ library(dplyr)
 library(raster)
 library(vegan)
 library(data.table)
+library(doBy)
+library(tidyr)
+library(doMC)
+library(foreach)
+registerDoMC(cores = 6)
+library(MASS)
+library(vegan)
+
 
 # source required functions
 source("/mnt/data1tb/Dropbox/Lepidopteraglobal/scripts/functions.R")
