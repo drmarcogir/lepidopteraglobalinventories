@@ -29,10 +29,8 @@ spec1<-fread("/mnt/data1tb/Dropbox/Lepidopteraglobal/data/butterflydataonly.csv"
 #########################
 
 # Filter 1: basis of record
-
 exclude<-c("FOSSIL_SPECIMEN","LITERATURE","LIVING_SPECIMEN","MACHINE_OBSERVATION",
 "MATERIAL_SAMPLE")
-
 spec2<-spec1[!spec1$basisofrecord %in% exclude,]
 
 # Filter 2: only records with year and day
@@ -42,11 +40,8 @@ spec4$counter<-1
 
 # Filter 3: exclude duplicates
 duplicates<-ddply(spec4,.(decimallatitude,decimallongitude,year,day,species),nrow)
-
 #write.csv(duplicates,file="/mnt/data1tb/Dropbox/Lepidopteraglobal/data/duplicates.csv",row.names=F)
-
 #spec1<-data.frame(species=unique(spec4$species))
-
 #write.csv(spec1,file="/mnt/data1tb/Dropbox/Lepidopteraglobal/data/spec1.csv",row.names=F)
 
 # Filter 4: taxonomic uncertainty
