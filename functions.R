@@ -68,8 +68,7 @@ legrank <- function(inputdf, ntiles, colname, inraster = NULL) {
         labminmax1 <- paste("[", round(min(tmp[, colname]), digits = 2), ";", round(max(tmp[, 
             colname]), digits = 2), "]", sep = "")
         tmp$rankd <- labminmax1
-        results <- rbind(tmp, results)
-        
+        results <- rbind(tmp, results)        
     }
     results$rankd <- as.factor(results$rankd)
     # create labels for NA data frame
