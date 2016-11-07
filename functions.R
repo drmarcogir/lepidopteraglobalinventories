@@ -1,6 +1,7 @@
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
 #@@ Calculate trends by country 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 trendsmg <- function(inputdf, min, max) {
     results <- NULL
     # list of countries
