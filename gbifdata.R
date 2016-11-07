@@ -23,6 +23,7 @@ world<-spTransform(world,CRS("+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +un
 
 # read in data
 spec1<-fread("/mnt/data1tb/Dropbox/Lepidopteraglobal/data/butterflydataonly.csv")
+
 #########################
 # Data cleaning
 #########################
