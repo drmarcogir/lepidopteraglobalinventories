@@ -1,8 +1,9 @@
-#' Calculate inventory incompletness using species accumulation curves
+#
+#' @Calculate inventory incompletness using species accumulation curves
 #' @inputdf = input dataframe containing incidence records for species
 #' @inraster = raster grid providing the resolution of the analyes
+#'
  
-
 compsac <- function(inputdf, inraster) {
     # reproject
     coordinates(inputdf) <- ~decimallongitude + decimallatitude
