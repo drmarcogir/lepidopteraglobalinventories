@@ -12,17 +12,12 @@ library(foreach);library(MASS);library(vegan)
 registerDoMC(cores = 6)
 
 # source required functions
-# source required functions
 marcofunctions<-list.files("/mnt/data1tb/Dropbox/Lepidopteraglobal/lepidopterascripts/functions",full.names=TRUE)
 for (f in 1:length(marcofunctions)) {source(marcofunctions[f])}
-
-
-source("/mnt/data1tb/Dropbox/Lepidopteraglobal/scripts/functions.R")
-
+# read in shapefile with info on administrative borders of all countries
 latlon<-CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
 world<-readShapePoly("/mnt/data1tb/Dropbox/Lepidopteraglobal/shapefiles/TM_WORLD_BORDERS-0.3/TM_WORLD_BORDERS-0.3.shp",proj4string=latlon)
 world<-spTransform(world,CRS("+proj=moll +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +units=m +no_defs"))
-
 # read in data
 spec1<-fread("/mnt/data1tb/Dropbox/Lepidopteraglobal/data/butterflydataonly.csv")
 
