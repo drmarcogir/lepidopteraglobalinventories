@@ -4,23 +4,12 @@
 ################################
 
 # load required libraries
-library(WriteXLS)
-library(plyr)
-library(ggplot2)
-library(RColorBrewer)
-library(maptools)
-library(dplyr)
-library(raster)
-library(vegan)
-library(data.table)
-library(doBy)
-library(tidyr)
-library(doMC)
-library(foreach)
+library(WriteXLS);library(plyr);library(ggplot2)
+library(RColorBrewer);library(maptools);library(dplyr)
+library(raster);library(vegan);library(data.table)
+library(doBy);library(tidyr);library(doMC)
+library(foreach);library(MASS);library(vegan)
 registerDoMC(cores = 6)
-library(MASS)
-library(vegan)
-
 
 # source required functions
 source("/mnt/data1tb/Dropbox/Lepidopteraglobal/scripts/functions.R")
