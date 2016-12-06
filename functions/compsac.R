@@ -21,8 +21,7 @@ compsac <- function(inputdf, inraster) {
     tmp1 <- tmp[!tmp$species %in% "", ]
     # unique list of cells
     cat.l <- unique(tmp1$cats)
-    results <- foreach(x = 1:length(cat.l), .errorhandling = c("remove")) %dopar% 
-        {
+    results <- foreach(x = 1:length(cat.l), .errorhandling = c("remove")) %dopar% {
             tmpcat <- subset(tmp1, cats == cat.l[x])
             # reshape
             tmpcat1 <- spread(tmpcat, species, counter)
