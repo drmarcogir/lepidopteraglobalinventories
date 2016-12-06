@@ -1,1 +1,1 @@
-# A global analysis of the completness of butterfly inventories using Species Accumulation Curves (SAC) and Generalized Linear Modelling (GLM). Data were sources from the Global Biodiversity Information Facility (> 4000000 records)
+# A global analysis of the completness of butterfly inventories using Species Accumulation Curves (SAC) and Generalized Linear Modelling (GLM). Data were sourced from the Global Biodiversity Information Facility (> 4000000 records)
