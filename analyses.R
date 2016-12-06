@@ -12,6 +12,11 @@ library(foreach);library(MASS);library(vegan)
 registerDoMC(cores = 6)
 
 # source required functions
+# source required functions
+marcofunctions<-list.files("/mnt/data1tb/Dropbox/Lepidopteraglobal/lepidopterascripts/functions",full.names=TRUE)
+for (f in 1:length(marcofunctions)) {source(marcofunctions[f])}
+
+
 source("/mnt/data1tb/Dropbox/Lepidopteraglobal/scripts/functions.R")
 
 latlon<-CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
