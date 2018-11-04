@@ -1,4 +1,8 @@
 # A global analysis of the completeness of butterfly inventory data
 
-A global analysis of the completness of butterfly inventories using Species Accumulation Curves (SAC) and Generalized Linear Modelling (GLM). Data were sourced from the Global Biodiversity Information Facility web site (> 4000000 records).
+*Marco Girardello* (marco.girardello@gmail.com) 
 
+R code developed as part of the manuscript "A global analysis of the completeness of butterfly inventory data (in review)". A copy of the main script (Analyses.R) is shown below. All support functions can be sourced through the main script.
+
+```r
+```
